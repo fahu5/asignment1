@@ -1,0 +1,424 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Keep the shadow */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    background-color: rgba(45, 55, 72, 0.8); /* Semi-transparent shade color */
+    position: sticky; /* Optional: Make navbar sticky */
+    top: 0; /* Optional: Stick to the top */
+    z-index: 1000; /* Ensure navbar stays above other content */
+    color: #fff; /* Text color for contrast */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #054f9e !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    width: 100%; /* Take full width to center properly */
+  }
+  
+  .nav-item {
+    font-weight: 500;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0a0a0a !important;
+    margin-right: 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #007bff !important;
+  }
+  
+  
+  /* Navbar Actions Container */
+  .navbar-actions {
+    margin-left: auto; /* Push buttons to the right */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add spacing between buttons */
+  }
+  
+  /* Main Content Styles */
+  main {
+    flex: 1; /* Allow main content to grow and push footer to the bottom */
+    padding: 2rem 0;
+    text-align: center; /* Center-align the content */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #080808;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(3, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* Push footer to the bottom */
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #080808;
+  }
+  
+  /* Base styles for the icon buttons */
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border: 1px solid #054f9e; /* Border color */
+    border-radius: 50%; /* Makes it circular */
+    color: #054f9e; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+  }
+  
+  /* Hover effect */
+  .icon-button:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: #fff; /* Icon color on hover */
+  }
+  
+  /* Optional: Add spacing between icons */
+  .icon-button:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  /* Hero-section blur effect */
+  .hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Text color */
+    overflow: hidden;
+  }
+  
+  /* Blurred Background */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1;
+  }
+  
+  /* Overlay for better readability */
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+  }
+  
+  /* Hero Content Styling */
+  .hero-content {
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #e8eaec;
+  }
+  
+  /* Call-to-Action Button */
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #161515;
+    background-color: #cfd306; /* Button color */
+    border: 2px solid #0f0f0f;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e8eaec; /* Darker shade on hover */
+  }
+  
+  /* Dark mode toggle button */
+  #dark-mode-toggle {
+    border: none; /* Remove border */
+    background: black;
+    color: yellow;/*herit text color */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  #dark-mode-toggle:hover {
+    opacity: 0.8; /* Slight fade on hover */
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for body */
+  }
+  
+  /* Dark mode navbar */
+  body.dark-mode .navbar {
+    background-color: rgba(18, 18, 18, 0.9); /* Dark shade for navbar */
+    color: #e0e0e0; /* Light text for navbar */
+  }
+  
+  body.dark-mode .navbar .nav-link {
+    color: #f3e140; /* Light text for navbar links */
+  }
+  
+  
+  body.dark-mode .nav-link:hover {
+    color: #f3f718 !important; /* Yellow hover color for navbar links */
+  }
+  
+  /* Dark mode buttons */
+  body.dark-mode .btn-outline-primary {
+    border-color: #161616; /* Light border */
+    color: #181717; /* Light text */
+  }
+  
+  body.dark-mode .btn-outline-primary:hover {
+    background-color: #f3f576; /* Yellow background on hover */
+    color: #121212; /* Dark text on hover */
+  }
+  
+  /* Dark mode hero section */
+  body.dark-mode .hero-section {
+    color: #ffffff; /* Light text for hero section */
+  }
+  
+  body.dark-mode .hero-section .cta-button {
+    background-color: #f3f576; /* Yellow background for CTA button */
+    color: #121212; /* Dark text for CTA button */
+  }
+  
+  body.dark-mode .hero-section .cta-button:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #121212; /* Dark text on hover */
+  }
+  
+  
+  
+  /* Dark mode icons */
+  body.dark-mode .icon-button {
+    border-color: #080808; /* Light border for icons */
+    color: #141414; /* Light color for icons */
+  }
+  
+  body.dark-mode .icon-button:hover {
+    background-color: #f3f576; /* Yellow background on hover */
+    color: #121212; /* Dark text on hover */
+  }
+  
+  /* Dark mode toggle icon */
+  body.dark-mode #dark-mode-toggle .fa-moon {
+    color: #0a0a0a; /* Light color for moon icon */
+  }
+  
+  body.dark-mode #dark-mode-toggle .fa-sun {
+    color: #f3f576; /* Yellow color for sun icon */
+  }
+  
+  
+  
+  /* contact page*/
+  .contact-page{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #d7dfe7;
+  }
+  .container {
+    max-width: 1100px;
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px 60px 20px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  .container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container .content .left-side {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+  }
+  .content .left-side::before {
+    content: "";
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afafb6;
+  }
+  .content .left-side .details {
+    margin: 14px;
+    text-align: center;
+  }
+  .content .left-side .details i {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  .content .left-side .details .topic{
+    font-size: 18px;
+    font-weight: 500;
+    
+  }
+  .content .left-side .details .text-one,
+  .content .left-side .details .text-two, p {
+    font-size: 14px;
+    color: #434344;
+  }
+  
+  .container .content .right-side {
+    width: 75%;
+    margin-left: 75px;
+  }
+  .content .right-side .topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #007bff;
+  }
+  .right-side .input-box {
+    height: 55px;
+    width: 100%;
+    margin: 12px 0;
+  }
+  .right-side .input-box input,
+  .right-side .input-box textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #f0f1f8;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+  }
+  .right-side .message-box {
+    min-height: 110px;
+  }
+  .right-side .input-box textarea {
+    padding-top: 6px;
+  }
+  .right-side .button {
+    display: inline-block;
+    margin-top: 12px;
+  }
+  .right-side .button input[type="button"] {
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button input[type="button"]:hover {
+    background: #007bff;
+  }
+  
+  @media (max-width: 950px) {
+    .container {
+      width: 90%;
+      padding: 30px 40px 40px 35px;
+    }
+    .container .content .right-side {
+      width: 75%;
+      margin-left: 55px;
+    }
+  }
+  @media (max-width: 820px) {
+    .container {
+      margin: 40px 0;
+      height: 100%;
+    }
+    .container .content {
+      flex-direction: column-reverse;
+    }
+    .container .content .left-side {
+      width: 100%;
+      flex-direction: row;
+      margin-top: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .container .content .left-side::before {
+      display: none;
+    }
+    .container .content .right-side {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
+  
